@@ -4,9 +4,9 @@
 
 ![GlobeTour Preview](images/screensshots.png)
 
-**[🚀 Демо](https://isdmitryy.github.io/globe_tour/)** ·
-
 </div>
+
+**[🚀 Демо](https://isdmitryy.github.io/globe_tour/)** ·
 
 ---
 
