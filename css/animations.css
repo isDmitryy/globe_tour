@@ -1,0 +1,267 @@
+/* ================================================
+   АНИМАЦИИ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ
+   Начальное состояние — элемент невидим.
+   JS добавляет класс --visible когда элемент
+   попадает в поле зрения.
+   ================================================ */
+
+/* Базовое скрытое состояние */
+.anim {
+  opacity: 0;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* Финальное состояние — элемент виден */
+.anim--visible {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* Типы анимаций */
+.anim--fade-up {
+  transform: translateY(40px);
+}
+.anim--fade-down {
+  transform: translateY(-40px);
+}
+.anim--fade-left {
+  transform: translateX(-40px);
+}
+.anim--fade-right {
+  transform: translateX(40px);
+}
+.anim--scale {
+  transform: scale(0.92);
+}
+
+/* Задержки для последовательного появления */
+.anim--delay-1 {
+  transition-delay: 0.1s;
+}
+.anim--delay-2 {
+  transition-delay: 0.2s;
+}
+.anim--delay-3 {
+  transition-delay: 0.3s;
+}
+.anim--delay-4 {
+  transition-delay: 0.4s;
+}
+.anim--delay-5 {
+  transition-delay: 0.5s;
+}
+.anim--delay-6 {
+  transition-delay: 0.6s;
+}
+
+/* ================================================
+   АНИМАЦИЯ ЗАГРУЗКИ HERO
+   Запускается сразу при загрузке страницы
+   ================================================ */
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-badge-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hero элементы анимируются последовательно */
+.hero__tagline {
+  animation: hero-fade-up 0.6s ease both;
+  animation-delay: 0.1s;
+}
+
+.hero__title {
+  animation: hero-fade-up 0.6s ease both;
+  animation-delay: 0.2s;
+}
+
+.hero__description {
+  animation: hero-fade-up 0.6s ease both;
+  animation-delay: 0.3s;
+}
+
+.hero__stats {
+  animation: hero-fade-up 0.6s ease both;
+  animation-delay: 0.4s;
+}
+
+.hero__actions {
+  animation: hero-fade-up 0.6s ease both;
+  animation-delay: 0.5s;
+}
+
+.hero__visual {
+  animation: hero-fade-in 0.8s ease both;
+  animation-delay: 0.3s;
+}
+
+.hero__badge {
+  animation: hero-badge-in 0.6s ease both;
+  animation-delay: 0.8s;
+}
+
+/* ================================================
+   HOVER-ЭФФЕКТЫ КАРТОЧЕК
+   Дополнительные эффекты поверх базовых
+   ================================================ */
+
+/* Пульсация иконки при hover */
+.service-card:hover .service-card__icon {
+  animation: icon-bounce 0.4s ease;
+}
+
+@keyframes icon-bounce {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.25);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Линия под заголовком секции */
+.section__title {
+  position: relative;
+  display: inline-block;
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-light)
+  );
+  border-radius: 2px;
+}
+
+/* Анимация линии при появлении */
+.section__header.anim--visible .section__title::after {
+  animation: line-expand 0.5s ease 0.4s both;
+}
+
+@keyframes line-expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 48px;
+  }
+}
+
+/* ================================================
+   FLOATING ЭФФЕКТ — Hero Badge
+   ================================================ */
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero__badge {
+  animation:
+    hero-badge-in 0.6s ease 0.8s both,
+    floating 3s ease-in-out 1.5s infinite;
+}
+
+/* ================================================
+   АНИМАЦИЯ КНОПОК
+   ================================================ */
+
+/* Ripple эффект при клике */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.btn:active::after {
+  opacity: 1;
+}
+
+/* ================================================
+   ГРАДИЕНТНЫЙ ФОН HERO
+   ================================================ */
+
+.hero {
+  background: radial-gradient(
+    ellipse 60% 50% at 100% 50%,
+    var(--color-accent-bg) 0%,
+    transparent 70%
+  );
+}
+
+[data-theme="dark"] .hero {
+  background: radial-gradient(
+    ellipse 60% 50% at 100% 50%,
+    rgba(66, 206, 245, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+/* ================================================
+   СЧЁТЧИК ЦИФР — состояние загрузки
+   ================================================ */
+
+.about__stat-value {
+  display: inline-block;
+  transition: transform 0.1s ease;
+}
+
+/* Небольшой скейл при обновлении цифры */
+.about__stat-value--tick {
+  transform: scale(1.05);
+}

@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="ru" data-theme="light" data-lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SEO ===== -->
+    <title>GlobeTour — Международное турагентство | Туры в 80+ стран</title>
+    <meta
+      name="description"
+      content="GlobeTour — международное турагентство. Индивидуальные и групповые туры в 80+ стран мира. Лучшие цены, 12 лет опыта, 15 000+ довольных клиентов."
+    />
+    <meta
+      name="keywords"
+      content="турагентство, международные туры, индивидуальные туры, групповые туры, Бали, Мальдивы, Япония"
+    />
+    <meta name="author" content="GlobeTour" />
+    <link rel="canonical" href="https://globetour.com/" />
+
+    <!-- ===== OPEN GRAPH (соцсети) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://globetour.com/" />
+    <meta
+      property="og:title"
+      content="GlobeTour — Международное турагентство"
+    />
+    <meta
+      property="og:description"
+      content="Туры в 80+ стран мира. Индивидуальный подход, лучшие цены, 12 лет опыта."
+    />
+    <meta
+      property="og:image"
+      content="https://globetour.com/images/og-image.jpg"
+    />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GlobeTour — Международное турагентство"
+    />
+    <meta
+      name="twitter:description"
+      content="Туры в 80+ стран мира. Индивидуальный подход, лучшие цены."
+    />
+    <meta
+      name="twitter:image"
+      content="https://globetour.com/images/og-image.jpg"
+    />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="icon" sizes="192x192" href="images/icons/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="images/icons/android-chrome-512x512.png">
+
+    <link rel="icon" href="images/icons/favicon.ico" />
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml" />
+
+    <!-- ===== PWA MANIFEST ===== -->
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#42cef5" />
+
+    <!-- Инлайн-скрипт темы — до CSS -->
+    <script>
+      (function () {
+        const saved = localStorage.getItem("globetour-theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = saved || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <!-- Google Fonts — только нужные начертания -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  
+  <body>
+    <!-- Skip Navigation — позволяет пользователям скринридеров
+     перепрыгнуть навигацию и сразу попасть в контент -->
+<a href="#main-content" class="skip-link">
+  Перейти к основному содержимому
+</a>
+
+<!-- Добавляем id на main -->
+<main id="main-content">
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <!-- Логотип -->
+        <a href="#" class="header__logo" aria-label="GlobeTour — на главную">
+          <span class="header__logo-icon">✈</span>
+          <span class="header__logo-text"
+            >Globe<span class="accent">Tour</span></span
+          >
+        </a>
+
+        <!-- Навигация -->
+        <nav class="nav" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link" data-i18n="nav.about">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link" data-i18n="nav.services"
+                >Услуги</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#tours" class="nav__link" data-i18n="nav.tours">Туры</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link" data-i18n="nav.contact"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Контролы: язык + тема + бургер -->
+        <div class="header__controls">
+          <!-- Переключатель языка -->
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            aria-label="Переключить язык"
+          >
+            <span class="lang-toggle__current">RU</span>
+            <span class="lang-toggle__divider">/</span>
+            <span class="lang-toggle__other">EN</span>
+          </button>
+
+          <!-- Переключатель темы -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Переключить тему"
+          >
+            <!-- Иконка солнца (light) -->
+            <svg
+              class="theme-toggle__icon theme-toggle__icon--sun"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <!-- Иконка луны (dark) -->
+            <svg
+              class="theme-toggle__icon theme-toggle__icon--moon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+
+          <!-- Бургер (только мобайл) -->
+          <button
+            class="burger"
+            id="burger"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Мобильная навигация">
+        <ul class="mobile-menu__list">
+          <li>
+            <a href="#about" class="mobile-menu__link" data-i18n="nav.about"
+              >О нас</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="mobile-menu__link"
+              data-i18n="nav.services"
+              >Услуги</a
+            >
+          </li>
+          <li>
+            <a href="#tours" class="mobile-menu__link" data-i18n="nav.tours"
+              >Туры</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="mobile-menu__link" data-i18n="nav.contact"
+              >Контакты</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero section" id="hero">
+        <div class="container hero__inner">
+          <!-- Левая колонка: текст -->
+          <div class="hero__content">
+            <p class="hero__tagline" data-i18n="hero.tagline">
+              Международное турагентство
+            </p>
+            <h1 class="hero__title" data-i18n="hero.title">
+              Открой мир вместе с <span class="accent">GlobeTour</span>
+            </h1>
+            <p class="hero__description" data-i18n="hero.description">
+              Организуем путешествия в 80+ стран мира. Индивидуальный подход,
+              лучшие цены и незабываемые впечатления.
+            </p>
+
+            <!-- Мини-статистика -->
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <strong class="hero__stat-value">12+</strong>
+                <span class="hero__stat-label" data-i18n="hero.stat1"
+                  >лет опыта</span
+                >
+              </div>
+              <div class="hero__stat">
+                <strong class="hero__stat-value">80+</strong>
+                <span class="hero__stat-label" data-i18n="hero.stat2"
+                  >стран</span
+                >
+              </div>
+              <div class="hero__stat">
+                <strong class="hero__stat-value">15 000+</strong>
+                <span class="hero__stat-label" data-i18n="hero.stat3"
+                  >клиентов</span
+                >
+              </div>
+            </div>
+
+            <!-- CTA кнопки -->
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary" data-i18n="hero.cta1">
+                Подобрать тур
+              </a>
+              <a href="#tours" class="btn btn--outline" data-i18n="hero.cta2">
+                Смотреть туры
+              </a>
+            </div>
+          </div>
+
+          <!-- Правая колонка: изображение -->
+          <div class="hero__visual">
+            <div class="hero__image-wrap">
+              <img
+                src="images/hero/International_travel_agency.jpeg"
+                alt="Путешествие с GlobeTour"
+                class="hero__image"
+                width="600"
+                height="520"
+                loading="eager"
+              />
+              <!-- Floating-карточка поверх фото -->
+              <div class="hero__badge">
+                <span class="hero__badge-icon">⭐</span>
+                <div>
+                  <strong>4.9 / 5.0</strong>
+                  <span data-i18n="hero.badge">рейтинг клиентов</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="about section section--alt" id="about">
+        <div class="container">
+          <div class="section__header anim anim--fade-up">
+            <h2 class="section__title">
+              <span data-i18n="about.title">О компании </span>
+              <span class="accent">GlobeTour</span>
+            </h2>
+            <p class="section__subtitle" data-i18n="about.subtitle">
+              Мы помогаем людям открывать мир с 2012 года
+            </p>
+          </div>
+
+          <div class="about__inner">
+            <!-- Левая колонка: текст + цифры -->
+            <div class="about__content anim anim--fade-left">
+              <p class="about__text" data-i18n="about.text1">
+                GlobeTour — международное турагентство с офисами в Москве,
+                Варшаве и Дубае. Мы специализируемся на индивидуальных турах,
+                групповых путешествиях и корпоративных поездках.
+              </p>
+              <p class="about__text" data-i18n="about.text2">
+                Наша команда из 50+ экспертов знает направления изнутри — многие
+                из них объездили страны, которые предлагают клиентам.
+              </p>
+
+              <!-- Цифры -->
+              <div class="about__stats">
+                <div class="about__stat anim anim--fade-up anim--delay-1">
+                  <strong class="about__stat-value" data-count="12">0</strong>
+                  <span class="about__stat-suffix">+</span>
+                  <p class="about__stat-label" data-i18n="about.stat1">
+                    лет на рынке
+                  </p>
+                </div>
+                <div class="about__stat anim anim--fade-up anim--delay-2">
+                  <strong class="about__stat-value" data-count="80">0</strong>
+                  <span class="about__stat-suffix">+</span>
+                  <p class="about__stat-label" data-i18n="about.stat2">стран</p>
+                </div>
+                <div class="about__stat anim anim--fade-up anim--delay-3">
+                  <strong class="about__stat-value" data-count="15000"
+                    >0</strong
+                  >
+                  <span class="about__stat-suffix">+</span>
+                  <p class="about__stat-label" data-i18n="about.stat3">
+                    клиентов
+                  </p>
+                </div>
+                <div class="about__stat anim anim--fade-up anim--delay-4">
+                  <strong class="about__stat-value" data-count="98">0</strong>
+                  <span class="about__stat-suffix">%</span>
+                  <p class="about__stat-label" data-i18n="about.stat4">
+                    довольных клиентов
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Правая колонка: фото -->
+            <div class="about__visual anim anim--fade-right">
+              <img
+                src="images/team/International_Travel_Agency_Team.jpeg"
+                alt="Команда GlobeTour"
+                class="about__image"
+                width="540"
+                height="440"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES ===== -->
+      <section class="services section" id="services">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title" data-i18n="services.title">
+              Наши услуги
+            </h2>
+            <p class="section__subtitle" data-i18n="services.subtitle">
+              Всё для вашего идеального путешествия
+            </p>
+          </div>
+
+          <ul class="services__grid">
+            <li class="service-card anim anim--fade-up anim--delay-1">
+              <div class="service-card__icon" aria-hidden="true">🌍</div>
+              <h3 class="service-card__title" data-i18n="services.item1.title">
+                Индивидуальные туры
+              </h3>
+              <p class="service-card__text" data-i18n="services.item1.text">
+                Маршрут, отель и программа — всё под ваши желания и бюджет
+              </p>
+            </li>
+
+            <li class="service-card anim anim--fade-up anim--delay-2">
+              <div class="service-card__icon" aria-hidden="true">👥</div>
+              <h3 class="service-card__title" data-i18n="services.item2.title">
+                Групповые туры
+              </h3>
+              <p class="service-card__text" data-i18n="services.item2.text">
+                Готовые маршруты с гидом и единомышленниками по всему миру
+              </p>
+            </li>
+
+            <li class="service-card anim anim--fade-up anim--delay-3">
+              <div class="service-card__icon" aria-hidden="true">✈️</div>
+              <h3 class="service-card__title" data-i18n="services.item3.title">
+                Авиабилеты
+              </h3>
+              <p class="service-card__text" data-i18n="services.item3.text">
+                Лучшие цены на перелёты по любым направлениям мира
+              </p>
+            </li>
+
+            <li class="service-card anim anim--fade-up anim--delay-4">
+              <div class="service-card__icon" aria-hidden="true">🏨</div>
+              <h3 class="service-card__title" data-i18n="services.item4.title">
+                Отели
+              </h3>
+              <p class="service-card__text" data-i18n="services.item4.text">
+                Подбор отелей любой категории — от бюджетных до люкс
+              </p>
+            </li>
+
+            <li class="service-card anim anim--fade-up anim--delay-5">
+              <div class="service-card__icon" aria-hidden="true">🛡️</div>
+              <h3 class="service-card__title" data-i18n="services.item5.title">
+                Страхование
+              </h3>
+              <p class="service-card__text" data-i18n="services.item5.text">
+                Туристические страховки для безопасного путешествия
+              </p>
+            </li>
+
+            <li class="service-card anim anim--fade-up anim--delay-6">
+              <div class="service-card__icon" aria-hidden="true">💼</div>
+              <h3 class="service-card__title" data-i18n="services.item6.title">
+                Корпоративные туры
+              </h3>
+              <p class="service-card__text" data-i18n="services.item6.text">
+                Организация деловых поездок и корпоративного отдыха
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== TOURS ===== -->
+      <section class="tours section section--alt" id="tours">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title" data-i18n="tours.title">
+              Популярные туры
+            </h2>
+            <p class="section__subtitle" data-i18n="tours.subtitle">
+              Направления, которые выбирают чаще всего
+            </p>
+          </div>
+
+          <!-- Слайдер -->
+          <div class="slider" id="toursSlider">
+            <div class="slider__track" id="sliderTrack">
+              <article class="tour-card anim anim--scale anim--delay-1">
+                <div class="tour-card__image-wrap">
+                  <img
+                    src="images/tours/Bali_Indonesia.jpeg"
+                    alt="Бали"
+                    class="tour-card__image"
+                    width="380"
+                    height="240"
+                    loading="lazy"
+                  />
+                  <span class="tour-card__badge" data-i18n="tours.badge.hot"
+                    >Горящий</span
+                  >
+                </div>
+                <div class="tour-card__body">
+                  <h3 class="tour-card__title" data-i18n="tours.bali.title">
+                    Бали, Индонезия
+                  </h3>
+                  <p class="tour-card__meta">
+                    <span data-i18n="tours.duration">14 ночей</span> ·
+                    <span data-i18n="tours.type.beach">Пляжный</span>
+                  </p>
+                  <div class="tour-card__footer">
+                    <div class="tour-card__price">
+                      <span class="tour-card__price-from" data-i18n="tours.from"
+                        >от</span
+                      >
+                      <strong>89 900 ₽</strong>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="btn btn--primary btn--sm"
+                      data-i18n="tours.book"
+                      >Забронировать</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="tour-card anim anim--scale anim--delay-2">
+                <div class="tour-card__image-wrap">
+                  <img
+                    src="images/tours/Maldives.jpeg"
+                    alt="Мальдивы"
+                    class="tour-card__image"
+                    width="380"
+                    height="240"
+                    loading="lazy"
+                  />
+                  <span
+                    class="tour-card__badge tour-card__badge--new"
+                    data-i18n="tours.badge.new"
+                    >Новинка</span
+                  >
+                </div>
+                <div class="tour-card__body">
+                  <h3 class="tour-card__title" data-i18n="tours.maldives.title">
+                    Мальдивы
+                  </h3>
+                  <p class="tour-card__meta">
+                    <span data-i18n="tours.duration2">10 ночей</span> ·
+                    <span data-i18n="tours.type.luxury">Люкс</span>
+                  </p>
+                  <div class="tour-card__footer">
+                    <div class="tour-card__price">
+                      <span class="tour-card__price-from" data-i18n="tours.from"
+                        >от</span
+                      >
+                      <strong>159 900 ₽</strong>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="btn btn--primary btn--sm"
+                      data-i18n="tours.book"
+                      >Забронировать</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="tour-card anim anim--scale anim--delay-3">
+                <div class="tour-card__image-wrap">
+                  <img
+                    src="images/tours/Japan_Tokyo.jpeg"
+                    alt="Япония"
+                    class="tour-card__image"
+                    width="380"
+                    height="240"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="tour-card__body">
+                  <h3 class="tour-card__title" data-i18n="tours.japan.title">
+                    Япония, Токио
+                  </h3>
+                  <p class="tour-card__meta">
+                    <span data-i18n="tours.duration3">12 ночей</span> ·
+                    <span data-i18n="tours.type.culture">Культурный</span>
+                  </p>
+                  <div class="tour-card__footer">
+                    <div class="tour-card__price">
+                      <span class="tour-card__price-from" data-i18n="tours.from"
+                        >от</span
+                      >
+                      <strong>124 900 ₽</strong>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="btn btn--primary btn--sm"
+                      data-i18n="tours.book"
+                      >Забронировать</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="tour-card anim anim--scale anim--delay-4">
+                <div class="tour-card__image-wrap">
+                  <img
+                    src="images/tours/Italy_Rome.jpeg"
+                    alt="Италия"
+                    class="tour-card__image"
+                    width="380"
+                    height="240"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="tour-card__body">
+                  <h3 class="tour-card__title" data-i18n="tours.italy.title">
+                    Италия, Рим
+                  </h3>
+                  <p class="tour-card__meta">
+                    <span data-i18n="tours.duration4">7 ночей</span> ·
+                    <span data-i18n="tours.type.excursion">Экскурсионный</span>
+                  </p>
+                  <div class="tour-card__footer">
+                    <div class="tour-card__price">
+                      <span class="tour-card__price-from" data-i18n="tours.from"
+                        >от</span
+                      >
+                      <strong>74 900 ₽</strong>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="btn btn--primary btn--sm"
+                      data-i18n="tours.book"
+                      >Забронировать</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="tour-card anim anim--scale anim--delay-5">
+                <div class="tour-card__image-wrap">
+                  <img
+                    src="images/tours/Dubai.jpeg"
+                    alt="Дубай"
+                    class="tour-card__image"
+                    width="380"
+                    height="240"
+                    loading="lazy"
+                  />
+                  <span class="tour-card__badge" data-i18n="tours.badge.hot"
+                    >Горящий</span
+                  >
+                </div>
+                <div class="tour-card__body">
+                  <h3 class="tour-card__title" data-i18n="tours.dubai.title">
+                    Дубай, ОАЭ
+                  </h3>
+                  <p class="tour-card__meta">
+                    <span data-i18n="tours.duration5">8 ночей</span> ·
+                    <span data-i18n="tours.type.luxury">Люкс</span>
+                  </p>
+                  <div class="tour-card__footer">
+                    <div class="tour-card__price">
+                      <span class="tour-card__price-from" data-i18n="tours.from"
+                        >от</span
+                      >
+                      <strong>99 900 ₽</strong>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="btn btn--primary btn--sm"
+                      data-i18n="tours.book"
+                      >Забронировать</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Навигация слайдера -->
+            <button
+              class="slider__btn slider__btn--prev"
+              id="sliderPrev"
+              aria-label="Предыдущий слайд"
+            >
+              &#8592;
+            </button>
+            <button
+              class="slider__btn slider__btn--next"
+              id="sliderNext"
+              aria-label="Следующий слайд"
+            >
+              &#8594;
+            </button>
+
+            <!-- Dots -->
+            <div
+              class="slider__dots"
+              id="sliderDots"
+              aria-label="Навигация по слайдам"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title" data-i18n="contact.title">
+              Оставить заявку
+            </h2>
+            <p class="section__subtitle" data-i18n="contact.subtitle">
+              Менеджер свяжется с вами в течение 30 минут
+            </p>
+          </div>
+
+          <div class="contact__inner">
+            <!-- Форма -->
+            <div class="contact__form-wrap anim anim--fade-left">
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="name" data-i18n="form.name"
+                    >Ваше имя</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Иван Иванов"
+                    autocomplete="name"
+                    required
+                  />
+                  <span class="form-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone" data-i18n="form.phone"
+                    >Телефон</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-input"
+                    placeholder="+7 (999) 000-00-00"
+                    autocomplete="tel"
+                    required
+                  />
+                  <span class="form-error" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label
+                    class="form-label"
+                    for="destination"
+                    data-i18n="form.destination"
+                    >Направление</label
+                  >
+                  <input
+                    type="text"
+                    id="destination"
+                    name="destination"
+                    class="form-input"
+                    placeholder="Бали, Мальдивы, Япония..."
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label
+                    class="form-label"
+                    for="message"
+                    data-i18n="form.message"
+                    >Комментарий</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-input form-textarea"
+                    rows="4"
+                    placeholder="Расскажите о вашем путешествии..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn--primary btn--full"
+                  id="submitBtn"
+                >
+                  <span data-i18n="form.submit">Отправить заявку</span>
+                </button>
+
+                <p class="form-privacy" data-i18n="form.privacy">
+                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                </p>
+              </form>
+            </div>
+
+            <!-- Контактная информация -->
+            <div class="contact__info anim anim--fade-right">
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">📍</div>
+                <div>
+                  <strong
+                    class="contact-item__title"
+                    data-i18n="contact.address.label"
+                    >Адрес</strong
+                  >
+                  <p
+                    class="contact-item__text"
+                    data-i18n="contact.address.value"
+                  >
+                    Варшава, ул. Маршалковская, 12
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">📞</div>
+                <div>
+                  <strong
+                    class="contact-item__title"
+                    data-i18n="contact.phone.label"
+                    >Телефон</strong
+                  >
+                  <a href="tel:+48221234567" class="contact-item__text"
+                    >+7 (999) 000-00-00</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">✉️</div>
+                <div>
+                  <strong
+                    class="contact-item__title"
+                    data-i18n="contact.email.label"
+                    >Email</strong
+                  >
+                  <a
+                    href="mailto:hello@globetour.com"
+                    class="contact-item__text"
+                    >hello@globetour.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">🕐</div>
+                <div>
+                  <strong
+                    class="contact-item__title"
+                    data-i18n="contact.hours.label"
+                    >Режим работы</strong
+                  >
+                  <p class="contact-item__text" data-i18n="contact.hours.value">
+                    Пн–Пт: 9:00–20:00, Сб: 10:00–18:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="header__logo" aria-label="GlobeTour">
+            <span class="header__logo-icon">✈</span>
+            <span class="header__logo-text"
+              >Globe<span class="accent">Tour</span></span
+            >
+          </a>
+          <p class="footer__tagline" data-i18n="footer.tagline">
+            Открываем мир для вас с 2012 года
+          </p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <ul class="footer__nav-list">
+            <li>
+              <a href="#about" class="footer__nav-link" data-i18n="nav.about"
+                >О нас</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="footer__nav-link"
+                data-i18n="nav.services"
+                >Услуги</a
+              >
+            </li>
+            <li>
+              <a href="#tours" class="footer__nav-link" data-i18n="nav.tours"
+                >Туры</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="footer__nav-link"
+                data-i18n="nav.contact"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__copy">
+          <p data-i18n="footer.copy">© 2024 GlobeTour. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/theme.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Schema.org — помогает Google понять что это за сайт -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "GlobeTour",
+        "description": "Международное турагентство. Туры в 80+ стран мира.",
+        "url": "https://globetour.com",
+        "logo": "https://globetour.com/images/favicon/favicon.svg",
+        "telephone": "+48221234567",
+        "email": "hello@globetour.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Маршалковская, 12",
+          "addressLocality": "Варшава",
+          "addressCountry": "PL"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "18:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "15000"
+        }
+      }
+    </script>
+  </body>
+</html>

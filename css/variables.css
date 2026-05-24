@@ -1,0 +1,63 @@
+:root {
+  /* ===== АКЦЕНТНЫЕ ЦВЕТА ===== */
+  --color-accent: #42cef5;
+  --color-accent-dark: #1ab8e0;
+  --color-accent-light: #a8ecfb;
+  --color-accent-bg: #f0fbff;
+
+  /* ===== LIGHT THEME (по умолчанию) ===== */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f9fb;
+  --color-text: #1a1a2e;
+  --color-text-muted: #6b7280;
+  --color-card: #ffffff;
+  --color-border: #e5e7eb;
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 32px rgba(66, 206, 245, 0.2);
+
+  /* ===== ТИПОГРАФИКА ===== */
+  --font-family: "Inter", sans-serif;
+  --font-size-xs: 0.875rem; /* 14px */
+  --font-size-sm: 1rem; /* 16px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.5rem; /* 24px */
+  --font-size-xl: 2.25rem; /* 36px */
+  --font-size-2xl: 3rem; /* 48px */
+
+  /* ===== ОТСТУПЫ ===== */
+  --space-xs: 0.5rem; /* 8px  */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
+  --space-2xl: 5rem; /* 80px */
+  --space-3xl: 7.5rem; /* 120px */
+
+  /* ===== РАДИУСЫ ===== */
+  --radius-sm: 0.5rem; /* 8px  */
+  --radius-md: 1rem; /* 16px */
+  --radius-lg: 1.5rem; /* 24px */
+  --radius-xl: 2rem; /* 32px */
+
+  /* ===== ПЕРЕХОДЫ ===== */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ===== LAYOUT ===== */
+  --container-width: 1200px;
+  --header-height: 72px;
+}
+
+/* ===== DARK THEME ===== */
+/* Когда на <html> стоит data-theme="dark" — переменные перезаписываются */
+[data-theme="dark"] {
+  --color-bg: #0f1117;
+  --color-bg-alt: #1a1d27;
+  --color-text: #f0f4f8;
+  --color-text-muted: #9ca3af;
+  --color-card: #1e2130;
+  --color-border: #2d3148;
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 32px rgba(66, 206, 245, 0.15);
+}

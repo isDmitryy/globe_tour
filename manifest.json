@@ -1,0 +1,21 @@
+{
+  "name": "GlobeTour — Международное турагентство",
+  "short_name": "GlobeTour",
+  "description": "Туры в 80+ стран мира",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#42cef5",
+  "icons": [
+    {
+      "src": "images/favicon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

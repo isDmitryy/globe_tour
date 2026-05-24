@@ -1,0 +1,327 @@
+/* ==============================================
+   MOBILE FIRST — базовые стили уже написаны.
+   Здесь только расширения для больших экранов.
+   ============================================== */
+
+/* ================================================
+   ПЛАНШЕТ — от 768px
+   ================================================ */
+@media (min-width: 768px) {
+  /* Контейнер */
+  .container {
+    padding-inline: var(--space-lg);
+  }
+
+  /* Секции */
+  .section {
+    padding-block: var(--space-3xl);
+  }
+
+  .section__title {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero__stats {
+    gap: var(--space-xl);
+  }
+
+  /* Services — 2 колонки на планшете */
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* About stats — 2 колонки */
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Бургер скрываем — показываем навигацию */
+  .burger {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+}
+
+/* ================================================
+   ДЕСКТОП — от 1024px
+   ================================================ */
+@media (min-width: 1024px) {
+  /* Контейнер */
+  .container {
+    padding-inline: var(--space-xl);
+  }
+
+  /* Hero — двухколоночный split-layout */
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero__image {
+    height: 520px;
+  }
+
+  /* About — две колонки */
+  .about__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Services — три колонки */
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Contact — две колонки */
+  .contact__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ================================================
+   ШИРОКИЙ ЭКРАН — от 1280px
+   ================================================ */
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: var(--space-lg);
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+  }
+}
+
+/* ================================================
+   МОБАЙЛ — переопределения (до 767px)
+   Используем max-width только там, где нужно
+   явно сбросить десктопный стиль
+   ================================================ */
+@media (max-width: 767px) {
+  /* Header */
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .lang-toggle {
+    font-size: 0.75rem;
+  }
+
+  /* Hero — одна колонка */
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero__tagline {
+    display: inline-block;
+  }
+
+  .hero__description {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero__stats {
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .hero__actions {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Hero — визуал идёт вторым (order) */
+  .hero__content {
+    order: 1;
+  }
+  .hero__visual {
+    order: 2;
+  }
+
+  .hero__image {
+    height: 280px;
+  }
+
+  .hero__badge {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: var(--space-sm);
+    white-space: nowrap;
+  }
+
+  /* About — одна колонка */
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about__content {
+    order: 1;
+  }
+  .about__visual {
+    order: 2;
+  }
+
+  .about__image {
+    height: 280px;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Services — одна колонка */
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tours — слайдер по одной карточке */
+  .tour-card {
+    width: calc(100vw - var(--space-2xl));
+    max-width: 360px;
+  }
+
+  .slider__btn--prev {
+    left: 0;
+  }
+  .slider__btn--next {
+    right: 0;
+  }
+
+  /* Contact — одна колонка */
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__form-wrap {
+    padding: var(--space-md);
+  }
+
+  /* Contact info — горизонтальный скролл не нужен */
+  .contact__info {
+    gap: var(--space-xs);
+  }
+
+  /* Footer */
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .footer__nav-list {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  /* Секции */
+  .section__header {
+    margin-bottom: var(--space-xl);
+  }
+}
+
+/* ================================================
+   ПЛАНШЕТ — 768px до 1023px
+   ================================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Hero — одна колонка на планшете тоже */
+  .hero__inner {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .hero__content {
+    order: 1;
+  }
+  .hero__visual {
+    order: 2;
+  }
+
+  .hero__description {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero__stats {
+    justify-content: center;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__image {
+    height: 400px;
+  }
+
+  /* About — одна колонка */
+  .about__inner {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .about__content {
+    order: 1;
+  }
+  .about__visual {
+    order: 2;
+  }
+
+  .about__image {
+    height: 360px;
+  }
+
+  /* Contact — одна колонка */
+  .contact__inner {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  /* Tour карточки */
+  .tour-card {
+    width: 320px;
+  }
+}
+
+/* ================================================
+   УТИЛИТЫ ДОСТУПНОСТИ
+   ================================================ */
+
+/* Для пользователей, которые отключили анимации */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Высококонтрастный режим */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: #000000;
+    --color-text-muted: #333333;
+  }
+}

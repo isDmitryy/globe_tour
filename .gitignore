@@ -1,0 +1,33 @@
+# Системные файлы macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Системные файлы Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Системные файлы Linux
+*~
+
+# Редакторы
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Логи
+*.log
+npm-debug.log*
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Переменные окружения (никогда не коммитим!)
+.env
+.env.local
+.env.production
